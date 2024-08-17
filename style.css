@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body {
+    width: 100%;
+    height: 300vh;
+}
+
+.head {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#00000044, #00000044), url(image/6.jpg);
+    background-size: cover;
+}
+
+.head .top {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 7%;
+    background: #c3c3c351;
+    z-index: 100;
+}
+
+.head .top ul li {
+    position: absolute;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    left: 30px;
+    transition: 0.5s;
+}
+
+.head .top ul li a {
+    text-decoration: none;
+    color: #e7e7e7b1;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+    text-shadow: 10px 10px 10px #2d2427;
+}
+
+.head .top ul li a::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: #2d2427;
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+    transition: 0.5s;
+}
+
+.head .top ul li a:hover::after {
+    width: 80%;
+}
+
+.head .top ul li a:hover {
+    color: #2d2427;
+    text-shadow: none;
+}
+
+.head .top h2{
+    position: absolute;
+    position: relative;
+    display: inline-block;
+    left: 64%;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 10px 10px 10px #2d2427;
+    cursor: pointer;
+}
+.head .top h2:hover{
+    animation: flipc ease-in-out 1s infinite forwards;
+}
+@keyframes flipc{
+    0%{
+        color: #c3c3c3b4;
+        text-shadow: 10px 10px 10px #2d2427;
+    }
+    50%{
+        color: #2d2427;
+        text-shadow: 10px 10px 10px #c3c3c3b4;
+    }
+    100%{
+        color: #c3c3c3b4;
+        text-shadow: 10px 10px 10px #2d2427;
+    }
+}
+
+header .contant {
+    position: relative;
+}
+
+.contant h1 {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    color: #c3c3c3b4;
+    top: 30vh;
+    left: 28%;
+}
+
+.contant h2 {
+    position: absolute;
+    font-size: 45px;
+    font-weight: bold;
+    left: 38%;
+    top: 40vh;
+    color: #c3c3c3b4;
+}
+
+.contant button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background: #ffffff00;
+    border-radius: 10px;
+    border: 2px solid #c3c3c3b4;
+    box-shadow: 0 0 2px #c3c3c3b4;
+    left: 44%;
+    top: 52vh;
+    font-size: 22px;
+    font-weight: bold;
+    color: #c3c3c3b4;
+    transition: 0.5s;
+}
+
+.contant button:hover {
+    box-shadow: 0 0 20px #2d2427;
+    cursor: pointer;
+    color: #2d2427;
+}
+
+.About{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #655949;
+    justify-content: space-around;
+}
+.About .text{
+    position: relative;
+    right: 5%;
+    color: #e7e7e7b1;
+}
+.About .text h1{
+    position: relative;
+    font-size: 50px;
+    margin-bottom: 20px;
+    top: 30%;
+
+}
+.About .text p{
+    position: relative;
+    top: 30%;
+    font-size: 20px;
+}
+.About .images img{
+    position: absolute;
+    width: 450px;
+    left: 60%;
+    animation: up-down ease-in-out 3s infinite;
+}
+@keyframes up-down{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.Project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #655949;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url(image/10.jpg);
+    background-size: cover;
+}
+.Project .tit h3{
+    font-size: 1.7em;
+    color: #e7e7e7b1;
+    margin-bottom: 20px;
+}
+.Project .box{
+    position: relative;
+    width: 400px;
+}
+.Project .box .list{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    background-color: #c3c3c351;
+    border-radius: 10px;
+    width: 350px;
+    height: 90px;
+}
+.Project .box:hover .list{
+    filter: blur(3px);
+    opacity: 0.50;
+}
+.Project .box .list:hover{
+    filter: blur(0);
+    opacity: 1;
+    box-shadow: -10px 20px 35px rgba(0, 0, 0, 0.605);
+    transform: scale(1.15);
+}
+.Project .box .list .imgbox{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.Project .box .list .imgbox img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Project .box .list .textcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #e7e7e7b1;
+}
+.Project .box .list .textcon .rank{
+    position: absolute;
+    right: -50px;
+    color: #2d2427;
+    transition: 0.5s;
+    font-size: 2em;
+}
+.Project .box .list .textcon .rank small{
+    font-weight: 500;
+    opacity: 0.50;
+}
+.Project .box .list:hover .textcon .rank{
+    right: 20px;
+}
+.Project .box .list .textcon h4{
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+.Project .box .list .textcon button{
+    position: relative;
+    width: 80px;
+    height: 30px;
+    border: 2px solid #c3c3c3b4;
+    box-shadow: 0 0 2px #c3c3c3b4;
+    background: transparent;
+    border-radius: 10px;
+    left: 0px;
+    top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.Project .box .list .textcon a button {
+    text-decoration: none;
+    color: #2d2427;
+    transition: 0.5s;
+}
+.Project .box .list .textcon a button:hover {
+    box-shadow: 0 0 20px #2d2427;
+    cursor: pointer;
+    color: #fff;
+}
